@@ -1,0 +1,46 @@
+body {
+  color: #ffffff;
+  margin-bottom: 0px;
+  user-select: none;
+  background-color: black;
+}
+/*
+.btn {
+  width: 49%; 
+  background-color: #424242;
+  height: 33px;
+  display: block;
+  text-align: center;
+  padding-top: 5px;
+  border: 1px solid #6C6C6C;
+  border-radius: 29px;
+  color: #B9B9B9;
+  font-size: 13px;
+  cursor: pointer;
+}*/
+.mb-title {
+  color: #B9B9B9;
+  font-size: 14px;
+  position: relative;
+  top: 11px;
+  left: 17px;
+  background: #535353;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.mb-border {
+  border: 1px solid #686868;
+  padding: 14px 12px 14px 12px;
+ /* border-radius: 10px;*/
+}
+
+.custom-select,.form-control {
+  background-color: #535353;
+  box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+  z-index: 1;
+  top: 22px;
+  left: -1px;
+  color: #ffffff;
+  margin: 0px 5px 0px 0px;
+}
+input:active{  background-color: #535353;color: #ffffff;}

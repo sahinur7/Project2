@@ -1,0 +1,164 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="./ext.js"></script>
+    <script src="./lib/CSInterface-4.0.0.js"></script>
+    <script src="./lib/jquery-1.9.1.js"></script>
+
+    <link id="ppstyle" rel="stylesheet" type="text/css" href="./style.css">
+    <title>Tile Exporter</title>
+</head>
+
+<body onLoad="onLoaded()">
+
+
+
+    <div class="main-border">
+        <span class="mb-title">Presets</span>
+        <div class="mb-border">
+            <div class="input-group">
+                <select class="custom-select" style="width:210px;">
+                    <option selected>Choose a preset</option>
+                    <option value="1">Preset 1</option>
+                    <option value="2">Preset 2</option>
+                    <option value="3">Preset 3</option>
+                </select>
+                <button class="btn btn-primary" style="width: 70px">Save</button>
+            </div>
+        </div>
+    </div>
+    <div class="main-border">
+        <span class="mb-title">Save Location</span>
+        <div class="mb-border">
+            <div class="input-group">
+                <input type="text" class="form-control" style="width:210px;" placeholder="Choose a save location">
+                <button class="btn btn-primary" style="width: 70px">Browse</button>
+            </div>
+        </div>
+    </div>
+    <div class="main-border">
+        <span class="mb-title">Number of Tiles</span>
+        <div class="mb-border" style="display: -webkit-box;     padding-left: 35px;">
+            <div class="input-group " style="width: 48%">
+
+                <label for="x">X</label>
+                <input type="text" class="x" style="width:100px;" placeholder="Row" value="4" title="Row">
+            </div>
+            <div class="input-group" style="width: 48%;">
+                <label for="y">Y</label>
+                <input type="text" class="y" style="width:100px;" placeholder="Calumn"  value="2" title="Calumn">
+            </div>
+        </div>
+    </div>
+    <div class="main-border">
+        <span class="mb-title">Tile Size (px)</span>
+        <div class="mb-border" style="display: -webkit-box;     padding-left: 35px;">
+            <div class="input-group " style="width: 48%">
+
+                <label for="w">W</label>
+                <input type="text" class="w" style="width:100px;" placeholder="Size" value="1920" title="Width in px">
+            </div>
+            <div class="input-group" style="width: 48%;">
+                <label for="h">H</label>
+                <input type="text" class="h" style="width:100px;" placeholder="Size"  value="1920" title="Height in px">
+            </div>
+        </div>
+    </div>
+    <div class="main-border">
+        <span class="mb-title">Tile Name</span>
+        <div class="mb-border" style="display: -webkit-box;     padding-left: 35px;">
+            <div class="input-group " style="width: 10%">
+                <label for="w">1</label>
+                <input type="text" class="w" style="width:100px;" placeholder="3qtr" value="3qtr" title="Width in px">
+                <br><br>
+                <label for="h">5</label>
+                <input type="text" class="h" style="width:100px;" placeholder="top"  value="top" title="Height in px">
+            </div>
+            <div class="input-group" style="width: 10%;">
+                <label for="h">2</label>
+                <input type="text" class="h" style="width:100px;" placeholder="front"  value="front" title="Height in px">
+                <br><br>
+                <label for="h">6</label>
+                <input type="text" class="h" style="width:100px;" placeholder="side"  value="side" title="Height in px">
+            </div>
+            <div class="input-group" style="width: 10%;">
+                <label for="h">3</label>
+                <input type="text" class="flat" style="width:100px;" placeholder="front"  value="flat" title="Height in px">
+                <br><br>
+                <label for="h">7</label>
+                <input type="text" class="flat" style="width:100px;" placeholder="thumbnail"  value="thumbnail" title="Height in px">
+            </div>
+            <div class="input-group" style="width: 10%;">
+                <label for="h">4</label>
+                <input type="text" class="h" style="width:100px;" placeholder="hand1"  value="hand1" title="Height in px">
+                <br><br>
+                <label for="h">8</label>
+                <input type="text" class="h" style="width:100px;" placeholder="hand2"  value="hand2" title="Height in px">
+            </div>
+        </div>
+    </div>
+    <div class="main-border">
+        <span class="mb-title">Color Variations</span>
+        <div class="mb-border" style="display: -webkit-box;     padding-left: 35px;">
+            <div class="input-group " style="width: 20%">
+
+                <label for="w">1</label>
+                <input type="checkbox" class="w" style="width:30px;" placeholder="Size" value="1920" title="Width in px">
+                <input type="text" class="w" style="width:100px;" placeholder="Yellow" value="Yellow" title="Width in px">
+            </div>
+            <div class="input-group " style="width: 20%">
+
+                <label for="w">2</label>
+                <input type="checkbox" class="w" style="width:30px;" placeholder="Size" value="1920" title="Width in px">
+                <input type="text" class="w" style="width:100px;" placeholder="Rose" value="Rose" title="Width in px">
+            </div>
+            <div class="input-group " style="width: 20%">
+
+                <label for="w">3</label>
+                <input type="checkbox" class="w" style="width:30px;" placeholder="Size" value="1920" title="Width in px">
+                <input type="text" class="w" style="width:100px;" placeholder="White" value="White" title="Width in px">
+            </div>
+           
+        </div>
+    </div>
+    <div class="main-border">
+        <span class="mb-title">Save Option</span>
+        <div class="mb-border" style="display: -webkit-box;     padding-left: 35px;">
+            <div class="input-group " style="width: 20%">
+
+                <input type="checkbox" class="w" style="width:30px;" placeholder="Size" value="1920" title="Width in px">
+                <label for="w">JPG</label>
+            </div>
+            <div class="input-group " style="width: 20%">
+                <input type="text" class="w" style="width:100px;" placeholder="12" value="12" title="Width in px">
+            </div>
+            <div class="input-group " style="width: 20%">
+                <input type="checkbox" class="w" style="width:30px;" placeholder="Size" value="1920" title="Width in px">
+                <label for="w">PNG</label>
+                <input type="text" class="w" style="width:100px;" placeholder="8" value="8" title="Width in px">
+                <br>
+                <input type="checkbox" class="w" style="width:30px;" placeholder="Size" value="1920" title="Width in px">
+                <label for="w">Transparency</label>
+                
+            </div>
+           
+        </div>
+    </div>
+    <div class="main-border">
+        <span class="mb-title">UI</span>
+        <div class="mb-border" style="display: -webkit-box;     padding-left: 35px;">
+            <div class="input-group " style="width: 20%">
+
+               <button >!!Export!!</button>
+               <button >Cancel</button>
+            </div>
+           
+           
+        </div>
+    </div>
+</body>
+
+</html>
